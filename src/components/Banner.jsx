@@ -7,11 +7,11 @@ const Banner = () => {
       <div className='py-24 flex flex-col md:flex-row-reverse justify-between items-center gap-8'>
         {/* Images side */}
         <div className='md:w-1/2 flex-col'>
-          <img src="../../public/images/home/banner.png" alt="banner image" />
+          <img src="images/home/testimonials/testimonials.png" alt="banner image" />
           {/* rating boxes */}
           <div className='flex items-center justify-around -mt-14 gap-4'>
             <div className='bg-white py-2 px-3 flex gap-3 shadow-md rounded-2xl w-64'>            
-              <img className='rounded-2xl' src="../../public/images/home/b-food1.png" alt="food image" />
+              <img className='rounded-2xl' src="../../public/images/home/b-food1.png" alt="" />
               <div>
                 <p className='font-medium mb-1'>Spicy noodies</p>
                 <div className="rating">
@@ -29,7 +29,7 @@ const Banner = () => {
               </div>
           </div> 
           <div className='hidden md:flex bg-white py-2 px-3 gap-3 shadow-md rounded-2xl w-64'>            
-              <img className='rounded-2xl' src="../../public/images/home/b-food1.png" alt="food image" />
+              <img className='rounded-2xl' src="../../public/images/home/b-food1.png" alt="" />
               <div>
                 <p className='font-medium mb-1'>Spicy noodies</p>
                 <div className="rating">
