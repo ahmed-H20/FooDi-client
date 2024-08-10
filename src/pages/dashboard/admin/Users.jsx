@@ -10,7 +10,7 @@ const Users = () => {
   const { refetch, data: users = [] } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:6002/users");
+      const res = await fetch("https://foo-di-server.vercel.app/users");
       return res.json();
     },
   });

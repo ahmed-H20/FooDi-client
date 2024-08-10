@@ -33,7 +33,7 @@ const Signup = () => {
             email: data.email,
           };
           
-        axios.post("http://localhost:6002/users", userInfo)
+        axios.post("https://foo-di-server.vercel.app/users", userInfo)
             .then((response) => {
               // console.log(response);
               alert("Signin successful!");
@@ -57,7 +57,7 @@ const Signup = () => {
           email: result?.user?.email,
         };
         axiosPublic
-          .post("http://localhost:6002/users", userInfor)
+          .post("https://foo-di-server.vercel.app/users", userInfor)
           .then((response) => {
             // console.log(response);
             alert("Signin successful!");
