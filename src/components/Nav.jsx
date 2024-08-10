@@ -35,7 +35,7 @@ const Nav = () => {
       <a href='/'>Home</a>
     </li>
     <li>
-      <a href="/menu">Menu</a>
+      <Link to="/menu">Menu</Link>
     </li>
     <li>
       <details>
