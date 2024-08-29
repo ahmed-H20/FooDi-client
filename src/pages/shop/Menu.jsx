@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../../components/Card";
 import { FaFilter } from "react-icons/fa";
+import Loading from "../../components/Loading";
 
 const Menu = () => {
   const [menu, setMenu] = useState([]);
@@ -172,9 +173,11 @@ const Menu = () => {
           </div>
           {/* Products cards */}
           <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2">
-            {currentItems.map((item) => (
-              <Card key={item._id} item={item} />
-            ))}
+            {currentItems ? (
+              currentItems.map((item) => <Card key={item._id} item={item} />)
+            ) : (
+              <Loading />
+            )}
           </div>
         </div>
 
@@ -182,7 +185,7 @@ const Menu = () => {
         <div className="flex justify-center my-8">
           {Array.from({
             length: Math.ceil(filteredItems.length / itemsPerPage),
-          }).map((index) => (
+          }).map((item, index) => (
             <button
               key={index + 1}
               onClick={() => paginate(index + 1)}
