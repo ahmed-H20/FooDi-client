@@ -23,11 +23,13 @@ const Modal = () => {
         document.getElementById("my_form").reset();    }
 
     const onSubmit = (data) => {
+        setErrorMessage("");        
        logIn(data.email,data.password).then((result)=>{
             const user = result.user;
             alert("Login Success")
             document.getElementById("my_modal_5").close()
             navigate('/', {replace: true})
+            closeForm();
        }).catch((error)=> {
             const errorMassege = error.message;
             setErrorMessage("Provide a correct email and password!")
@@ -40,7 +42,6 @@ const Modal = () => {
             alert("Login Success")
         }).catch((error)=> {
             const errorMessage = error.message;
-            alert("Login Failed!")
         })
     }
 
@@ -76,8 +77,9 @@ const Modal = () => {
                         <div className="form-control mt-6">
                             <button className="btn bg-green text-white">Login</button>
                         </div>
-                        <p className='text-center mt-4'>Donot have an account? <Link to="/signup" className="text-red underline">SignUp Now</Link></p>
-                        <div className='flex justify-center space-x-3 my-6'>
+                        <p className='text-center mt-4'>Donot have an account? <Link to="/signup" className="text-red underline">SignUp Now</Link></p>                       
+                    </form>
+                    <div className='flex justify-center space-x-3 my-6'>
                             <button className="btn btn-circle" onClick={handLogin}>
                                 <FaGoogle />
                             </button>
@@ -88,7 +90,6 @@ const Modal = () => {
                                 <FaGithub />
                             </button>
                         </div>
-                    </form>
                 </div>
             </div>
         </dialog>

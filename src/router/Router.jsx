@@ -12,6 +12,7 @@ import AddMenu from "../pages/dashboard/admin/AddMenu";
 import ManageItems from "../pages/dashboard/admin/ManageItems";
 import UpdateMenu from "../pages/dashboard/admin/UpdateMenu";
 import Payment from "../pages/shop/Payment";
+import Login from "../components/Login";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
     {
       path: "/signup",
       element: <Signup/>
+    },
+    {
+      path: "/login",
+      element: <Login/>
     },
     {
       path:"/dashboard",
