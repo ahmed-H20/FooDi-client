@@ -70,4 +70,14 @@ input::-webkit-inner-spin-button {
 
 #root{
   background-color: white;
+  color: black;
+}
+
+button{
+  border-color: white;
+  color: black;
+}
+
+footer{
+  color: black
 }
